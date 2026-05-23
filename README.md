@@ -100,7 +100,9 @@ pip install -r requirements.txt
 Tested on:
 - Python 3.10+
 - PyTorch 2.0+
-- Google Colab (T4 GPU)
+- Google Colab (A100 GPU)
+
+Note: If you run it on Colab, upload this repo to your Google Drive , put it in a folder name Project_GraphML and then mount to the drive as it shown in code
 
 ## Datasets
 
