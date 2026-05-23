@@ -129,7 +129,8 @@ All datasets are in `.mat` format and should be placed in `data/raw/`.
 ### 1. Setup
 
 Adjust paths in `notebooks/00_setup.ipynb` to point to your data directory. If running on Colab, mount Google Drive accordingly.
-Note : The last 3 cells set to run train notebook (07_train.ipynb) , evaluate notebook (08_evaluate.ipynb), and aggregation analysis (09_aggregation_analysis.ipynb). For reproduce purpose, it is sufficient to run ONLY this notebook fully.
+
+**Note** : The last 3 cells set to run training notebook (07_train.ipynb) , evaluation notebook (08_evaluate.ipynb), and aggregation analysis (09_aggregation_analysis.ipynb). For reproduce purpose, it is sufficient to run **ONLY** this notebook fully.
 
 
 ### 2. Train
@@ -224,7 +225,3 @@ training:
 ## License
 
 To be determined. Code currently intended for research purposes only.
-
-## Acknowledgments
-
-This project builds on the Zero-GAD framework. The RFF-based scalable clustering approach is inspired by SASE. Datasets follow the same split as the Zero-GAD paper for direct comparability.
