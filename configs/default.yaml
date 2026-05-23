@@ -1,0 +1,83 @@
+# Default hyperparameters for MultiScale Zero-GAD
+# Phase 1: Simple and stable configuration
+
+# ============================================================
+# Module 1: Asymmetric Spectral Normalization
+# ============================================================
+
+module1:
+  d_prime: 8
+  band_low: 0.5             # ignored if adaptive_bands=true
+  band_high: 1.5            # ignored if adaptive_bands=true
+  adaptive_bands: false              
+  band_low_percentile: 0.33         # 
+  band_high_percentile: 0.67        
+  alpha_low: 1.0
+  alpha_mid: 0.7
+  alpha_high: 0.5
+#set alpha = 0, test asymmetric spectral normalization
+# ============================================================
+# Module 2: RFF + STE K-means Clustering
+# ============================================================
+module2:
+  k_smoothing: 1            # Smoothing order (1 or 2)
+  sigma: 1.0                # RFF Gaussian kernel bandwidth
+  D_rff: 50                 # Number of random Fourier features (final dim = 2*D_rff)
+  d_svd: 32                 # T-SVD reduced dimension
+  tau: 0.5                  # STE temperature
+  kmeans_max_iter: 20       # K-means iterations
+
+# ============================================================
+# Module 4: Node-Neutralized Scoring
+# ============================================================
+module4:
+  d_hidden: 64              # GCN hidden dimension
+  d_latent: 32              # Latent representation dimension
+  num_encoder_layers: 3
+  num_decoder_layers: 2
+  dropout: 0.0
+
+# ============================================================
+# Multi-pass configuration
+# ============================================================
+multipass:
+  num_passes: 3
+  cluster_ratios: [0.5, 0.25, 0.125]   # n/2, n/4, n/8
+
+# ============================================================
+# Loss
+# ============================================================
+loss:
+  alpha: 2.0                # Sparsity-aware reconstruction
+  beta: 0.5                 # Neutralization weight
+  loss_weights: [1.0, 1.0, 1.0]   # Equal weighting across passes
+
+# ============================================================
+# Training
+# ============================================================
+training:
+  num_epochs: 100
+  lr: 5.0e-4 
+  weight_decay: 5.0e-4
+  grad_clip_norm: 1.0
+  eval_interval: 5
+  seed: 42
+
+# ============================================================
+# Datasets (Zero-GAD original split)
+# ============================================================
+datasets:
+  source:
+    - Facebook
+    - Flickr
+    - BlogCatalog
+    - ACM
+  target:
+    - Cora
+    - Citeseer
+    - Pubmed
+    - Photo
+    - CS
+    - Amazon
+    - YelpChi
+    - Reddit
