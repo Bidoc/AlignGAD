@@ -236,21 +236,6 @@ Detailed per-strategy heatmap available in `results/aggregation_heatmap.png`.
 - **Zero-GAD** (Zheng et al., MM '25): The base framework. AlignGAD inherits the neutralization-generation autoencoder mechanism and adds hierarchical multi-pass scoring.
 - **SASE** (CIKM '24): Source for the RFF-based scalable spectral clustering used in Module 2.
 
-## Citation
-
-If you use this code in your research, please cite the original Zero-GAD paper:
-
-```bibtex
-@inproceedings{zheng2025zerogad,
-  title={Breaking Semantic Barriers: A Zero-Shot Generalized Framework for Graph Anomaly Detection},
-  author={Zheng, Xiangping and others},
-  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia (MM '25)},
-  year={2025},
-  address={Dublin, Ireland}
-}
-```
-
-(Citation entry for AlignGAD itself to be added upon publication.)
 
 ## License
 
