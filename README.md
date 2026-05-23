@@ -129,17 +129,18 @@ All datasets are in `.mat` format and should be placed in `data/raw/`.
 ### 1. Setup
 
 Adjust paths in `notebooks/00_setup.ipynb` to point to your data directory. If running on Colab, mount Google Drive accordingly.
-Training and evaluate can also be done in this notebbook by running the last 3 cells
+Note : The last 3 cells set to run train notebook (07_train.ipynb) , evaluate notebook (08_evaluate.ipynb), and aggregation analysis (09_aggregation_analysis.ipynb). For reproduce purpose, it is sufficient to run ONLY this notebook fully.
 
 
 ### 2. Train
 
-Open `notebooks/07_train.ipynb` and run all cells. Training uses multi-domain collaborative learning: one source graph is sampled per training step.
+`notebooks/07_train.ipynb`. Training uses multi-domain collaborative learning: one source graph is sampled per training step.
 
 Default training:
 - 100 epochs
 - Best-checkpoint saving based on validation AUROC (Cora by default)
 - Per-pass scores cached after best checkpoint
+
 
 ### 3. Evaluate
 
