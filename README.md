@@ -213,23 +213,6 @@ training:
   seed: 42
 ```
 
-## Experimental Results (Current Best)
-
-Mean AUROC across 8 target datasets with best configuration (asymmetric fixed bands):
-
-| Dataset | P1 only | P2 only | P3 only | MEAN_all | MAX_all | Best Strategy |
-|---------|---------|---------|---------|----------|---------|---------------|
-| Cora | 0.609 | 0.564 | 0.529 | 0.582 | 0.565 | P1_only (0.609) |
-| Citeseer | 0.552 | 0.502 | 0.558 | 0.551 | 0.546 | P3_only (0.558) |
-| Pubmed | 0.595 | 0.556 | 0.540 | 0.575 | 0.571 | P1_only (0.595) |
-| Photo | 0.645 | 0.550 | 0.506 | 0.588 | 0.595 | P1_only (0.645) |
-| CS | 0.519 | 0.527 | 0.526 | 0.528 | 0.528 | MEAN_P2P3 (0.529) |
-| Amazon | 0.442 | 0.450 | 0.393 | 0.424 | 0.420 | P2_only (0.450) |
-| Reddit | 0.480 | 0.461 | 0.449 | 0.459 | 0.455 | P1_only (0.480) |
-| YelpChi | 0.493 | 0.631 | 0.628 | 0.593 | 0.556 | P2_only (0.631) |
-| **Average** | **0.5546** | **0.5564** | **0.5409** | **0.5637** | **0.5564** | — |
-
-Detailed per-strategy heatmap available in `results/aggregation_heatmap.png`.
 
 ## Related Work
 
