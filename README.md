@@ -102,7 +102,8 @@ Tested on:
 - PyTorch 2.0+
 - Google Colab (A100 GPU)
 
-Note: If you run it on Colab, upload this repo to your Google Drive , put it in a folder name Project_GraphML and then mount to the drive as it shown in code
+Note: If you run it on Colab, upload this repo to your Google Drive , put it in a folder name Project_GraphML ( the structure should be Project_GraphML/ms-zerogad/.... ) and then mount to the drive as it shown in code 
+
 
 ## Datasets
 
